@@ -1,0 +1,77 @@
+.sub-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sub-header p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.badge.pending {
+  background: #fff7ed;
+  color: #ea580c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.sub-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.info p {
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+.info span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline {
+  border: 1px solid #cbd5f5;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.view-all {
+  margin-top: 14px;
+  text-align: center;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+}

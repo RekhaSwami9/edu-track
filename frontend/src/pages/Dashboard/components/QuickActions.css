@@ -1,0 +1,29 @@
+.quick-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.quick-card h3 {
+  margin-bottom: 16px;
+}
+
+.quick-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #f1f5f9;
+  font-weight: 500;
+}
+
+.quick-btn.primary {
+  background: #2563eb;
+  color: white;
+}
