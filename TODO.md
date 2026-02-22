@@ -9,11 +9,11 @@
 - [x] 3. Create CreditTransaction Model - Track credit earned/used history
 - [x] 4. Create/Update Substitution Model - Status tracking (pending, accepted, completed, declined)
 
-## Phase 2: Backend APIs ⏳ PENDING
+## Phase 2: Backend APIs ✅ COMPLETED
 
-- [ ] 5. Availability Controller - Set/update weekly availability
-- [ ] 6. Credit Controller - View balance, transaction history
-- [ ] 7. Substitution Controller - Request substitution, notify available faculties, accept/decline logic, auto-assign with credits
+- [x] 5. Availability Controller - Set/update weekly availability
+- [x] 6. Credit Controller - View balance, transaction history
+- [x] 7. Substitution Controller - Request substitution, notify available faculties, accept/decline logic, auto-assign with credits
 
 ## Phase 3: Frontend Components ⏳ PENDING
 
