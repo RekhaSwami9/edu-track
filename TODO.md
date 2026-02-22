@@ -1,35 +1,105 @@
-# Edu-Track Credit-Based Substitution System - Implementation TODO
+# Edu-Track Credit-Based Substitution System - TODO
 
-## Phase 1: Database Models (Backend) ✅ COMPLETED
+## Phase 1: Database Schema ✅ COMPLETE
 
-### Tasks:
+- [x] User model (faculty/admin roles)
+- [x] Availability model (faculty availability slots)
+- [x] CreditTransaction model (credit tracking)
+- [x] Substitution model (substitution requests)
+- [x] Leave model (leave management)
 
-- [x] 1. Update User Model - Add credits, department, subjects, employeeId
-- [x] 2. Create Availability Model - Weekly time slots (Mon-Wed 10-2, etc.)
-- [x] 3. Create CreditTransaction Model - Track credit earned/used history
-- [x] 4. Create/Update Substitution Model - Status tracking (pending, accepted, completed, declined)
+## Phase 2: Backend APIs ✅ COMPLETE
 
-## Phase 2: Backend APIs ✅ COMPLETED
+- [x] Auth APIs (login, register, JWT)
+- [x] Availability APIs (CRUD, toggle status, find available)
+- [x] Credit APIs (balance, transactions, stats, leaderboard)
+- [x] Substitution APIs (request, accept, decline, complete, cancel)
+- [x] Leave APIs (apply, approve, reject, cancel)
+- [x] Middleware (auth protection, admin only)
 
-- [x] 5. Availability Controller - Set/update weekly availability
-- [x] 6. Credit Controller - View balance, transaction history
-- [x] 7. Substitution Controller - Request substitution, notify available faculties, accept/decline logic, auto-assign with credits
+## Phase 3: Frontend Components ✅ COMPLETE
 
-## Phase 3: Frontend Components ⏳ PENDING
+- [x] MyAvailability page (set availability, toggle status)
+- [x] MyCredits page (view balance, transaction history)
+- [x] RequestSubstitution page (create substitution requests)
+- [x] SubstitutionRequests page (view and manage requests)
+- [x] API integration with backend
+- [x] Navigation and routing
 
-- [ ] 8. My Availability Page - Calendar interface to mark available slots
-- [ ] 9. My Credits Page - Show current balance + transaction history
-- [ ] 10. Request Substitution Page - Form to request leave, use credits, see available faculties
-- [ ] 11. Substitution Requests Page - View incoming requests, accept/decline with one click
-- [ ] 12. Dashboard Updates - Show credits, pending requests, today's substitutions
+## Phase 4: Testing & Integration ✅ COMPLETE
 
-## Phase 4: Smart Algorithm ⏳ PENDING
+- [x] Backend server running on port 5001
+- [x] MongoDB connected
+- [x] Frontend running on port 5191
+- [x] API endpoints tested and working
 
-- [ ] 13. Matching Algorithm - Find faculties by: availability + subject compatibility + current load
-- [ ] 14. Credit Logic - Auto-assign if credits available, otherwise show request list
-- [ ] 15. Notification System - Real-time alerts for new substitution requests
+## Next Steps (Optional Enhancements)
 
-## Phase 5: Testing & Integration ⏳ PENDING
+- [ ] Add real-time notifications (Socket.io)
+- [ ] Email notifications for substitutions
+- [ ] Admin dashboard for managing all requests
+- [ ] Analytics and reporting
+- [ ] Mobile responsiveness improvements
+- [ ] Unit and integration tests
 
-- [ ] 16. Test all flows end-to-end
-- [ ] 17. Push to GitHub
+## Running the Application
+
+### Backend
+
+```bash
+cd backend
+npm start
+```
+
+Server runs on http://localhost:5001
+
+### Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+App runs on http://localhost:5191
+
+## API Documentation
+
+### Auth Endpoints
+
+- POST /api/auth/register - Register new user
+- POST /api/auth/login - Login user
+- GET /api/auth/me - Get current user
+
+### Availability Endpoints
+
+- GET /api/availability/:facultyId - Get faculty availability
+- PUT /api/availability/:facultyId - Update availability
+- PATCH /api/availability/:facultyId/toggle - Toggle status
+- GET /api/availability/find/available - Find available faculties
+
+### Credit Endpoints
+
+- GET /api/credits/balance/:facultyId - Get credit balance
+- GET /api/credits/transactions/:facultyId - Get transaction history
+- GET /api/credits/stats/:facultyId - Get credit stats
+- GET /api/credits/leaderboard - Get faculty leaderboard
+
+### Substitution Endpoints
+
+- POST /api/substitution/request - Request substitution
+- GET /api/substitution/my-requests - Get my requests
+- GET /api/substitution/my-substitutions - Get my substitutions
+- GET /api/substitution/notifications - Get pending notifications
+- POST /api/substitution/:id/accept - Accept substitution
+- POST /api/substitution/:id/decline - Decline substitution
+- POST /api/substitution/:id/complete - Complete substitution
+- POST /api/substitution/:id/cancel - Cancel substitution
+- GET /api/substitution/stats - Get substitution stats
+
+### Leave Endpoints
+
+- POST /api/leave/apply - Apply for leave
+- GET /api/leave/my-leaves - Get my leaves
+- GET /api/leave/all - Get all leaves (admin)
+- PATCH /api/leave/:leaveId/status - Update leave status
+- DELETE /api/leave/:leaveId - Cancel leave

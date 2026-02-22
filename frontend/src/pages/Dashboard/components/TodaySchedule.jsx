@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "./TodaySchedule.css";
 
 const TodaySchedule = () => {
+  const navigate = useNavigate();
+
+  const handleViewFullSchedule = () => {
+    navigate("/schedule");
+  };
+
   return (
     <div className="schedule-card">
       <h3>Today's Schedule</h3>
@@ -29,7 +36,13 @@ const TodaySchedule = () => {
         </div>
       </div>
 
-      <div className="view-all">View Full Schedule</div>
+      <div
+        className="view-all"
+        onClick={handleViewFullSchedule}
+        style={{ cursor: "pointer" }}
+      >
+        View Full Schedule
+      </div>
     </div>
   );
 };

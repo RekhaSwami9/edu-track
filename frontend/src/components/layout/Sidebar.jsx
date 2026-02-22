@@ -9,6 +9,11 @@ import {
   LogOut,
   ChevronLeft,
   ChevronRight,
+  Clock,
+  Coins,
+  PlusCircle,
+  Inbox,
+  User,
 } from "lucide-react";
 import "./Sidebar.css";
 
@@ -55,13 +60,53 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
         </NavLink>
 
         <NavLink
-          to="/substitution"
+          to="/my-availability"
           className="menu-item"
-          data-tooltip="Substitution"
+          data-tooltip="My Availability"
         >
           <span className="active-indicator" />
-          <Users size={18} />
-          <span className="menu-text">Substitution</span>
+          <Clock size={18} />
+          <span className="menu-text">My Availability</span>
+        </NavLink>
+
+        <NavLink
+          to="/my-credits"
+          className="menu-item"
+          data-tooltip="My Credits"
+        >
+          <span className="active-indicator" />
+          <Coins size={18} />
+          <span className="menu-text">My Credits</span>
+        </NavLink>
+
+        <NavLink
+          to="/request-substitution"
+          className="menu-item"
+          data-tooltip="Request Substitution"
+        >
+          <span className="active-indicator" />
+          <PlusCircle size={18} />
+          <span className="menu-text">Request Substitution</span>
+        </NavLink>
+
+        <NavLink
+          to="/substitution-requests"
+          className="menu-item"
+          data-tooltip="Substitution Requests"
+        >
+          <span className="active-indicator" />
+          <Inbox size={18} />
+          <span className="menu-text">Substitution Requests</span>
+        </NavLink>
+
+        <NavLink
+          to="/my-profile"
+          className="menu-item"
+          data-tooltip="My Profile"
+        >
+          <span className="active-indicator" />
+          <User size={18} />
+          <span className="menu-text">My Profile</span>
         </NavLink>
       </nav>
 

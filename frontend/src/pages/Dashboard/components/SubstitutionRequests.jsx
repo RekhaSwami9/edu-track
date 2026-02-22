@@ -1,6 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import "./SubstitutionRequests.css";
 
 const SubstitutionRequests = () => {
+  const navigate = useNavigate();
+
+  const handleAccept = (professorName) => {
+    alert(`Accepted substitution request from ${professorName}`);
+  };
+
+  const handleDecline = (professorName) => {
+    alert(`Declined substitution request from ${professorName}`);
+  };
+
+  const handleViewAll = () => {
+    navigate("/substitution-requests");
+  };
+
   return (
     <div className="sub-card">
       <div className="sub-header">
@@ -19,8 +34,18 @@ const SubstitutionRequests = () => {
           <span>Tomorrow · 10:00–11:00 · Lab 3</span>
         </div>
         <div className="actions">
-          <button className="btn-outline">Decline</button>
-          <button className="btn-primary">Accept</button>
+          <button
+            className="btn-outline"
+            onClick={() => handleDecline("Prof. Sarah Jenkins")}
+          >
+            Decline
+          </button>
+          <button
+            className="btn-primary"
+            onClick={() => handleAccept("Prof. Sarah Jenkins")}
+          >
+            Accept
+          </button>
         </div>
       </div>
 
@@ -32,12 +57,28 @@ const SubstitutionRequests = () => {
           <span>Friday · 2:00–3:00 · Hall B</span>
         </div>
         <div className="actions">
-          <button className="btn-outline">Decline</button>
-          <button className="btn-primary">Accept</button>
+          <button
+            className="btn-outline"
+            onClick={() => handleDecline("Dr. James Wilson")}
+          >
+            Decline
+          </button>
+          <button
+            className="btn-primary"
+            onClick={() => handleAccept("Dr. James Wilson")}
+          >
+            Accept
+          </button>
         </div>
       </div>
 
-      <div className="view-all">View All Requests</div>
+      <div
+        className="view-all"
+        onClick={handleViewAll}
+        style={{ cursor: "pointer" }}
+      >
+        View All Requests
+      </div>
     </div>
   );
 };

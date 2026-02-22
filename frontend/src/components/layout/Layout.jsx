@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import "./Layout.css";
 
 const Layout = () => {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
 
   return (
     <div className="layout">

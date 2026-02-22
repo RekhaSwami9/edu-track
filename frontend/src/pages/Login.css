@@ -93,3 +93,40 @@
 .login-footer a:hover {
   text-decoration: underline;
 }
+
+/* Error Message */
+.error-message {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  border: 1px solid #fecaca;
+}
+
+/* Demo Credentials */
+.demo-credentials {
+  text-align: center;
+  margin-top: 16px;
+  padding: 12px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+}
+
+.demo-credentials p {
+  font-size: 12px;
+  color: #166534;
+  margin: 0;
+}
+
+.demo-credentials strong {
+  color: #15803d;
+}
+
+/* Disabled Button */
+.login-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
