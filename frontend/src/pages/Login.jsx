@@ -19,21 +19,45 @@ const Login = () => {
     setLoading(true);
 
     try {
+      console.log("Attempting login with:", { email });
       const response = await loginUser({ email, password });
+      console.log("Login response:", response.data);
+
       const { token, user } = response.data;
+
+      if (!token || !user) {
+        throw new Error("Invalid response from server");
+      }
 
       // Store token and user data
       localStorage.setItem("token", token);
       localStorage.setItem("eduTrackUser", JSON.stringify(user));
 
-      // Update auth context
-      login();
+      // Update auth context with user data
+      login(user);
 
       navigate("/");
     } catch (err) {
-      setError(
-        err.response?.data?.message || "Login failed. Please try again.",
-      );
+      console.error("Login error:", err);
+      console.error("Error response:", err.response);
+      console.error("Error message:", err.message);
+
+      let errorMessage = "Login failed. Please try again.";
+
+      if (err.response) {
+        // Server responded with error
+        errorMessage =
+          err.response.data?.message || `Server error: ${err.response.status}`;
+      } else if (err.request) {
+        // Request made but no response
+        errorMessage =
+          "Cannot connect to server. Please check if the backend is running on port 5000.";
+      } else {
+        // Something else happened
+        errorMessage = err.message || "An unexpected error occurred.";
+      }
+
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
