@@ -9,6 +9,7 @@ import MyCredits from "../pages/MyCredits";
 import RequestSubstitution from "../pages/RequestSubstitution";
 import SubstitutionRequests from "../pages/SubstitutionRequests";
 import MyProfile from "../pages/MyProfile";
+import Settings from "../pages/Settings";
 import Layout from "../components/layout/Layout";
 
 export default function AppRoutes() {
@@ -28,6 +29,7 @@ export default function AppRoutes() {
           element={<SubstitutionRequests />}
         />
         <Route path="my-profile" element={<MyProfile />} />
+        <Route path="settings" element={<Settings />} />
       </Route>
     </Routes>
   );
