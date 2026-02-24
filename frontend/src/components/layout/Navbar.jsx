@@ -80,17 +80,6 @@ const Navbar = () => {
     <>
       <header className="navbar">
         <div className="navbar-left">
-          <p className="breadcrumb">
-            <span className="breadcrumb-root">Home</span>
-            {path !== "/" && (
-              <>
-                <span className="breadcrumb-separator"> / </span>
-                <span className="breadcrumb-current">{current}</span>
-              </>
-            )}
-          </p>
-
-          <h2 className="navbar-title">{current}</h2>
           <p className="navbar-subtitle">Welcome back, Dr. Morgan 👋</p>
         </div>
 
