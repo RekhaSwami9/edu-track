@@ -100,7 +100,7 @@ const Navbar = () => {
             onClick={() => setShowLeaveModal(true)}
           >
             <Plus size={18} />
-            <span>Leave+</span>
+            <span>Leave</span>
           </button>
         </div>
       </header>
