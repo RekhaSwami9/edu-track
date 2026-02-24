@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import {
   LayoutDashboard,
   Calendar,
@@ -20,6 +21,13 @@ import "./Sidebar.css";
 const Sidebar = ({ collapsed, setCollapsed }) => {
   const [hovered, setHovered] = useState(false);
   const isExpanded = !collapsed || hovered;
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
 
   return (
     <aside
@@ -117,7 +125,11 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
           <span className="menu-text">Settings</span>
         </NavLink>
 
-        <button className="logout-btn" data-tooltip="Logout">
+        <button
+          className="logout-btn"
+          data-tooltip="Logout"
+          onClick={handleLogout}
+        >
           <LogOut size={18} />
           <span className="menu-text">Logout</span>
         </button>
