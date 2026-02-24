@@ -13,13 +13,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const login = () => {
-    const userData = {
-      name: "Dr. John Smith",
-      email: "john.smith@edutrack.edu",
-      department: "Computer Science",
-      role: "faculty",
-    };
+  const login = (userData) => {
     setUser(userData);
     localStorage.setItem("eduTrackUser", JSON.stringify(userData));
   };
