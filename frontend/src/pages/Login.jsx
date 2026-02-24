@@ -51,7 +51,7 @@ const Login = () => {
       } else if (err.request) {
         // Request made but no response
         errorMessage =
-          "Cannot connect to server. Please check if the backend is running on port 5000.";
+          "Cannot connect to server. Please check if the backend is running on port 5001.";
       } else {
         // Something else happened
         errorMessage = err.message || "An unexpected error occurred.";
