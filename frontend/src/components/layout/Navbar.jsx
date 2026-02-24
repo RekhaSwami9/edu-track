@@ -80,7 +80,7 @@ const Navbar = () => {
     <>
       <header className="navbar">
         <div className="navbar-left">
-          <p className="navbar-subtitle">Welcome back, Dr. Morgan 👋</p>
+          <p className="navbar-subtitle">Welcome back, Dr. Morgan</p>
         </div>
 
         <div className="navbar-right">
