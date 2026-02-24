@@ -7,10 +7,6 @@
   flex-direction: column;
   padding: 16px;
   transition: width 0.3s ease;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 200;
 }
 
 /* COLLAPSED */
@@ -156,7 +152,7 @@
 .sidebar.collapsed .logout-btn::after {
   content: attr(data-tooltip);
   position: absolute;
-  left: 90px;
+  left: 100px;
   top: 50%;
   transform: translateY(-50%) translateX(-5px);
   background: #111827;
@@ -168,20 +164,21 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.2s ease;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .sidebar.collapsed .menu-item::before,
 .sidebar.collapsed .logout-btn::before {
   content: "";
   position: absolute;
-  left: 82px;
+  left: 88px;
   top: 50%;
   transform: translateY(-50%);
   border: 6px solid transparent;
   border-right-color: #111827;
   opacity: 0;
   transition: opacity 0.2s ease;
+  z-index: 9999;
 }
 
 .sidebar.collapsed .menu-item:hover::after,
