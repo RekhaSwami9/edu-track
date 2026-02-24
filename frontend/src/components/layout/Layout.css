@@ -1,11 +1,14 @@
 .layout {
   display: flex;
   min-height: 100vh;
+  position: relative;
 }
 
 .main-content {
   flex: 1;
   background: #f8fafc;
+  margin-left: 80px; /* Width of collapsed sidebar */
+  transition: margin-left 0.3s ease;
 }
 
 .page-content {
