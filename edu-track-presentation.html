@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>edu-track-presentation</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" />
+</head>
+<body>
+<h1 id="edu-track-faculty-management-system">Edu-Track: Faculty
+Management System</h1>
+<h2 id="presentation-for-faculty">Presentation for Faculty</h2>
+<h3 id="what-is-edu-track">🎯 What is Edu-Track?</h3>
+<p>Edu-Track is a <strong>modern web application</strong> for
+<strong>faculty/teachers</strong> to:</p>
+<ul>
+<li>View daily/weekly schedules</li>
+<li>Manage availability for substitute classes</li>
+<li>Request substitutions when unavailable</li>
+<li>Track leave applications and balance</li>
+<li>Manage ‘credits’ earned from substitute work</li>
+<li>See dashboard with stats, notices, and quick actions</li>
+</ul>
+<p><strong>Simple Analogy</strong>: Like a ‘Google Calendar + HR Portal’
+but tailored for teacher scheduling and subs!</p>
+<h3 id="main-features-screens">📱 Main Features &amp; Screens</h3>
+<ol type="1">
+<li><strong>Login</strong> (Secure faculty login)</li>
+<li><strong>Dashboard</strong>:
+<ul>
+<li>Stats cards (credits, classes today)</li>
+<li>Today’s schedule</li>
+<li>Quick action buttons</li>
+<li>Notice board</li>
+<li>Substitution requests</li>
+</ul></li>
+<li><strong>My Availability</strong>: Set free/busy times</li>
+<li><strong>My Credits</strong>: Earn/spend credits log</li>
+<li><strong>Leave</strong>: Apply and view leaves</li>
+<li><strong>Request Substitution</strong>: Find and request subs</li>
+<li><strong>Schedule</strong>: Full weekly view</li>
+<li><strong>Substitutions</strong>: Browse available faculty</li>
+<li><strong>Profile/Settings</strong>: Personal info</li>
+</ol>
+<h3 id="technologies-used-full-stack-explained">🛠️ Technologies Used
+(Full Stack Explained)</h3>
+<p>Edu-Track uses <strong>MERN Stack</strong> (MongoDB, Express, React,
+Node.js) – popular for fast web apps.</p>
+<h4
+id="frontend-user-interface---what-you-interact-with"><strong>Frontend</strong>
+(User Interface - What you interact with)</h4>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 43%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Purpose</th>
+<th>Why Chosen?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>React 19</strong></td>
+<td>Building interactive UI components (Dashboard cards, forms)</td>
+<td>Fast, reusable components, huge community</td>
+</tr>
+<tr>
+<td><strong>Vite</strong></td>
+<td>Development server &amp; build tool</td>
+<td>Super fast hot-reload (changes appear instantly)</td>
+</tr>
+<tr>
+<td><strong>React Router</strong></td>
+<td>Navigation between pages</td>
+<td>Smooth page switching without reload</td>
+</tr>
+<tr>
+<td><strong>Axios</strong></td>
+<td>Calling backend API</td>
+<td>Simple HTTP requests to fetch/save data</td>
+</tr>
+<tr>
+<td><strong>Lucide-React &amp; React Icons</strong></td>
+<td>Beautiful icons</td>
+<td>Modern, customizable icons for buttons/UI</td>
+</tr>
+<tr>
+<td><strong>CSS Modules/SCSS</strong></td>
+<td>Styling</td>
+<td>Responsive design (looks good on mobile/desktop)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="backend-server-data"><strong>Backend</strong> (Server &amp;
+Data)</h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 27%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Purpose</th>
+<th>Why Chosen?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Node.js + Express</strong></td>
+<td>Main server, API routes</td>
+<td>Fast JavaScript server, handles all requests</td>
+</tr>
+<tr>
+<td><strong>MongoDB + Mongoose</strong></td>
+<td>Database</td>
+<td>Flexible NoSQL DB for users, schedules, subs</td>
+</tr>
+<tr>
+<td><strong>JWT (JSON Web Tokens)</strong></td>
+<td>Secure login/authentication</td>
+<td>Tokens ensure only logged-in users access data</td>
+</tr>
+<tr>
+<td><strong>bcryptjs</strong></td>
+<td>Password hashing</td>
+<td>Secure password storage (can’t be hacked easily)</td>
+</tr>
+<tr>
+<td><strong>dotenv</strong></td>
+<td>Environment variables</td>
+<td>Secure config (DB password, ports)</td>
+</tr>
+<tr>
+<td><strong>CORS</strong></td>
+<td>Connect frontend-backend</td>
+<td>Allows browser to talk to server</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Architecture Flow:
+Browser (React) → API Calls (Axios) → Server (Express) → Database (MongoDB)</code></pre>
+<h4 id="development-tools"><strong>Development Tools</strong></h4>
+<ul>
+<li><strong>Nodemon</strong> (backend): Auto-restart server on code
+changes</li>
+<li><strong>ESLint</strong>: Code quality checks</li>
+</ul>
+<h3 id="how-to-run-live-demo-steps">🚀 How to Run (Live Demo Steps)</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Backend (Data Server)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> backend</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev  <span class="co"># Runs on http://localhost:5000</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Frontend (UI)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> frontend</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev  <span class="co"># Runs on http://localhost:5173</span></span></code></pre></div>
+<p><strong>Open browser</strong> → <code>http://localhost:5173</code> →
+Login → Demo features!</p>
+<h3 id="project-status">📊 Project Status</h3>
+<ul>
+<li><strong>Complete</strong>: All major UI pages (Dashboard, Schedule,
+Leaves, Subs)</li>
+<li><strong>Ready for</strong>: User testing, minor styling tweaks</li>
+<li><strong>Future</strong>: Admin panel, notifications, mobile app</li>
+</ul>
+<h3 id="benefits-for-faculty">✨ Benefits for Faculty</h3>
+<ul>
+<li><strong>Time-Saving</strong>: Digital over manual coordination</li>
+<li><strong>Real-Time Updates</strong>: Instant sub
+requests/approvals</li>
+<li><strong>Paperless</strong>: Track everything online</li>
+<li><strong>Secure &amp; Private</strong>: Faculty-only access</li>
+</ul>
+<p><strong>Thank You! Questions?</strong></p>
+<p><em>Built with ❤️ for efficient faculty management</em></p>
+</body>
+</html>
